@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    name: 'Vercel',
+    description: 'The platform for frontend developers. Built the enterprise GTM motion from the ground up, working alongside product-led growth to close the first wave of large contracts.',
+    url: 'https://vercel.com',
+    tags: ['GTM', 'Enterprise', 'Infra'],
+  },
+  {
+    name: 'Laravel Forge',
+    description: 'Server management for PHP developers. Helped position and commercialize Forge as the default deployment platform for the Laravel ecosystem.',
+    url: 'https://forge.laravel.com',
+    tags: ['GTM', 'PHP', 'DevTools'],
+  },
+  {
+    name: 'Laravel Vapor',
+    description: 'Serverless deployment for Laravel. Part of the early GTM for Vapor, the first serverless-native deployment platform built specifically for PHP.',
+    url: 'https://vapor.laravel.com',
+    tags: ['GTM', 'Serverless'],
+  },
+  {
+    name: 'Laravel Nova',
+    description: 'The administration panel for Laravel applications. Supported Nova\'s commercial launch, one of the most successful paid Laravel ecosystem products.',
+    url: 'https://nova.laravel.com',
+    tags: ['GTM', 'SaaS'],
+  },
+];
+---
+
+<BaseLayout
+  title="Projects"
+  description="Things I've worked on or been involved with."
+>
+  <div class="container">
+    <header>
+      <h1>Projects</h1>
+      <p>Things I've worked on or been closely involved with.</p>
+    </header>
+
+    <div class="grid">
+      {projects.map(project => (
+        <ProjectCard
+          name={project.name}
+          description={project.description}
+          url={project.url}
+          tags={project.tags}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+  }
+
+  header p {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 560px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

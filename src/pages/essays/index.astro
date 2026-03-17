@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EssayCard from '../../components/EssayCard.astro';
+
+const allEssays = await getCollection('essays', ({ data }) => !data.draft);
+const essays = allEssays.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Essays" description="Thoughts on go-to-market, devtools, and building things.">
+  <div class="container">
+    <header>
+      <h1>Essays</h1>
+      <p>Thoughts on go-to-market, devtools, and building things.</p>
+    </header>
+    <section>
+      {essays.map(essay => (
+        <EssayCard
+          title={essay.data.title}
+          description={essay.data.description}
+          date={essay.data.date}
+          slug={essay.id}
+          tags={essay.data.tags}
+        />
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+</style>

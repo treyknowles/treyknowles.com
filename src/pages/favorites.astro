@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const favorites = {
+  books: [
+    { title: 'The Mom Test', author: 'Rob Fitzpatrick', note: 'The best book on talking to customers. Read it before your next sales call.' },
+    { title: 'Crossing the Chasm', author: 'Geoffrey Moore', note: 'Still the clearest framework for taking a devtools product mainstream.' },
+    { title: 'High Output Management', author: 'Andy Grove', note: 'How great operators think about leverage and management.' },
+    { title: 'Shape Up', author: 'Ryan Singer / Basecamp', note: 'Changed how I think about product cycles and the relationship between GTM and product.' },
+  ],
+  tools: [
+    { title: 'Vercel', note: 'Still the best deployment experience I\'ve ever used.' },
+    { title: 'Linear', note: 'How all project management tools should feel. The benchmark for developer-focused product design.' },
+    { title: 'Raycast', note: 'Replaced Spotlight and never looked back.' },
+    { title: 'Warp', note: 'A terminal worth being excited about.' },
+    { title: 'Arc Browser', note: 'Rethought how a browser should work. Still my daily driver.' },
+  ],
+  podcasts: [
+    { title: 'Lenny\'s Podcast', note: 'Consistently the best product and growth thinking out there.' },
+    { title: 'The Changelog', note: 'Closest thing to a pulse on the open-source developer world.' },
+    { title: 'Acquired', note: 'Deeply researched company histories. Every episode feels like an MBA case study.' },
+    { title: 'My First Million', note: 'Entertaining idea generation from two people who think out loud well.' },
+  ],
+  gear: [
+    { title: 'MacBook Pro M3 Max', note: 'The best laptop I\'ve ever owned. No caveats.' },
+    { title: 'LG 27" 4K UltraFine', note: 'Clean, no-fuss display. Pairs perfectly with the MacBook.' },
+    { title: 'Keychron Q2', note: 'Compact, solid, satisfying. Great for travel too.' },
+    { title: 'AirPods Pro', note: 'Indispensable for calls, flights, and focus blocks.' },
+  ],
+};
+---
+
+<BaseLayout
+  title="Favorites"
+  description="Books, tools, podcasts, and gear I actually use and recommend."
+>
+  <div class="container">
+    <header>
+      <h1>Favorites</h1>
+      <p>Books, tools, podcasts, and gear I actually use and recommend.</p>
+    </header>
+
+    <div class="sections">
+      <section>
+        <h2>Books</h2>
+        <ul>
+          {favorites.books.map(item => (
+            <li>
+              <div class="item-title">{item.title} <span class="author">by {item.author}</span></div>
+              {item.note && <p>{item.note}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tools</h2>
+        <ul>
+          {favorites.tools.map(item => (
+            <li>
+              <div class="item-title">{item.title}</div>
+              {item.note && <p>{item.note}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Podcasts</h2>
+        <ul>
+          {favorites.podcasts.map(item => (
+            <li>
+              <div class="item-title">{item.title}</div>
+              {item.note && <p>{item.note}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Gear</h2>
+        <ul>
+          {favorites.gear.map(item => (
+            <li>
+              <div class="item-title">{item.title}</div>
+              {item.note && <p>{item.note}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+  }
+
+  header p {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  h2 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-muted);
+    margin: 0 0 1.25rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  li:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .item-title {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .author {
+    font-weight: 400;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+
+  li p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+</style>

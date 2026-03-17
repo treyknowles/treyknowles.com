@@ -1,0 +1,60 @@
+---
+const year = new Date().getFullYear();
+
+const socials = [
+  { href: 'https://twitter.com/treyknowles', label: 'Twitter' },
+  { href: 'https://linkedin.com/in/treyknowles', label: 'LinkedIn' },
+  { href: 'https://github.com/treyknowles', label: 'GitHub' },
+];
+---
+
+<footer>
+  <div class="inner">
+    <span class="copy">&copy; {year} Trey Knowles</span>
+    <ul>
+      {socials.map(({ href, label }) => (
+        <li><a href={href} target="_blank" rel="noopener noreferrer">{label}</a></li>
+      ))}
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: 4rem;
+  }
+
+  .inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .copy {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+
+  li a {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  li a:hover {
+    color: var(--color-text);
+  }
+</style>
