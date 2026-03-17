@@ -31,15 +31,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <span class="company">Vercel</span>
-              <span class="period">Early GTM</span>
+              <a class="company" href="https://laravel.com" target="_blank" rel="noopener">Laravel</a>
+              <span class="period">Oct 2024 – Mar 2026</span>
             </div>
-            <p>
-              Joined Vercel early in their growth phase. Helped build out the enterprise motion for
-              the platform that became the standard for frontend deployment. Worked closely with
-              developers and engineering teams to translate a product-led growth engine into enterprise
-              contracts without losing what made Vercel special.
-            </p>
+            <p class="role">Director, Sales and RevOps</p>
           </div>
         </div>
 
@@ -47,15 +42,98 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <span class="company">Laravel</span>
-              <span class="period">Early GTM</span>
+              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
+              <span class="period">Aug 2023 – Sep 2024</span>
             </div>
-            <p>
-              Part of the early commercial team at Laravel — the PHP framework with one of the most
-              passionate developer communities in the world. Helped commercialize a suite of tools
-              (Forge, Vapor, Nova, Spark) while preserving the community-first ethos that made Laravel
-              what it is.
-            </p>
+            <p class="role">Director of GTM Operations</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
+              <span class="period">Feb 2023 – Jul 2023</span>
+            </div>
+            <p class="role">Senior Manager, Sales Operations</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
+              <span class="period">Feb 2022 – Jan 2023</span>
+            </div>
+            <p class="role">Director, Mid Market Sales</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
+              <span class="period">Nov 2020 – Jan 2022</span>
+            </div>
+            <p class="role">Account Executive</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://bloomtech.com" target="_blank" rel="noopener">Lambda School</a>
+              <span class="period">May 2019 – Oct 2020</span>
+            </div>
+            <p class="role">Manager, Sales Development</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://outreach.io" target="_blank" rel="noopener">Outreach</a>
+              <span class="period">Jan 2019 – May 2019</span>
+            </div>
+            <p class="role">SDR</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://auth0.com" target="_blank" rel="noopener">Auth0</a>
+              <span class="period">Sep 2017 – Nov 2018</span>
+            </div>
+            <p class="role">Sales Operations</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://thomsonreuters.com" target="_blank" rel="noopener">Thomson Reuters</a>
+              <span class="period">Oct 2016 – Aug 2017</span>
+            </div>
+            <p class="role">Sales Program Specialist</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <a class="company" href="https://neo4j.com" target="_blank" rel="noopener">Neo Technology (Neo4j)</a>
+              <span class="period">May 2015 – May 2016</span>
+            </div>
+            <p class="role">Startup Community Manager</p>
           </div>
         </div>
       </section>
@@ -174,6 +252,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .company:hover {
+    text-decoration: underline;
   }
 
   .period {
@@ -181,10 +264,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--color-muted);
   }
 
-  .timeline-content p {
+  .role {
     font-size: 0.9375rem;
     color: var(--color-muted);
-    line-height: 1.65;
     margin: 0;
   }
 
