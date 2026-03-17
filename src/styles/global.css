@@ -19,8 +19,8 @@
 }
 
 [data-theme="light"] {
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f7f7f7;
+  --color-bg: #EEDEC5;
+  --color-bg-subtle: #E6D5BA;
   --color-border: #e5e5e5;
   --color-text: #111111;
   --color-muted: #666666;
