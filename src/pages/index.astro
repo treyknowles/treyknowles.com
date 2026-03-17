@@ -7,10 +7,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Trey Knowles — go-to-market for devtools. Early GTM at Vercel and Laravel."
 >
   <div class="container">
-    <header>
-      <h1>About</h1>
-    </header>
-
     <div class="content">
       <!-- Photo placeholder -->
       <div class="photo-wrap">
@@ -24,8 +20,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <!-- Career timeline -->
-      <section class="timeline">
-        <h2>Career</h2>
+      <details class="timeline">
+        <summary class="timeline-toggle">
+          <h2>Career <span class="toggle-icon" aria-hidden="true">🍕</span></h2>
+        </summary>
+
+        <div class="timeline-list">
 
         <div class="timeline-item">
           <div class="timeline-marker"></div>
@@ -136,20 +136,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="role">Startup Community Manager</p>
           </div>
         </div>
-      </section>
 
-      <!-- Contact -->
-      <section class="contact">
-        <h2>Get in touch</h2>
-        <p>
-          I'm always happy to talk with founders navigating early GTM, or developers curious about the
-          commercial side of developer tools.
-        </p>
-        <ul>
-          <li><a href="https://twitter.com/treyknowles" target="_blank" rel="noopener">Twitter / X</a></li>
-          <li><a href="https://linkedin.com/in/treyknowles" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-      </section>
+        </div>
+      </details>
+
     </div>
   </div>
 </BaseLayout>
@@ -161,19 +151,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 3rem 1.5rem 4rem;
   }
 
-  header {
-    margin-bottom: 2.5rem;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--color-text);
-    margin: 0;
-  }
-
-  .photo-wrap {
+.photo-wrap {
     margin-bottom: 2rem;
   }
 
@@ -217,8 +195,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0 0 1.5rem;
   }
 
-  .timeline {
+  details.timeline {
     margin-bottom: 3rem;
+  }
+
+  .timeline-toggle {
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .timeline-toggle::marker {
+    display: none;
+  }
+
+  .timeline-toggle h2 {
+    margin: 0;
+  }
+
+  .toggle-icon {
+    display: inline-block;
+    color: var(--color-muted);
+    transition: transform 0.2s ease;
+  }
+
+  details[open] .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .timeline-list {
+    /* no visual change, just a wrapper */
   }
 
   .timeline-item {
@@ -270,32 +280,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0;
   }
 
-  .contact {
-    margin-bottom: 0;
-  }
-
-  .contact p {
-    font-size: 0.9375rem;
-    color: var(--color-text);
-    line-height: 1.65;
-    margin: 0 0 1rem;
-  }
-
-  .contact ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1.25rem;
-  }
-
-  .contact li a {
-    font-size: 0.875rem;
-    color: var(--color-accent);
-    text-decoration: none;
-  }
-
-  .contact li a:hover {
-    text-decoration: underline;
-  }
 </style>

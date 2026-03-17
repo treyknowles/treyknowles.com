@@ -2,31 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const favorites = {
-  books: [
-    { title: 'The Mom Test', author: 'Rob Fitzpatrick', note: 'The best book on talking to customers. Read it before your next sales call.' },
-    { title: 'Crossing the Chasm', author: 'Geoffrey Moore', note: 'Still the clearest framework for taking a devtools product mainstream.' },
-    { title: 'High Output Management', author: 'Andy Grove', note: 'How great operators think about leverage and management.' },
-    { title: 'Shape Up', author: 'Ryan Singer / Basecamp', note: 'Changed how I think about product cycles and the relationship between GTM and product.' },
-  ],
-  tools: [
-    { title: 'Vercel', note: 'Still the best deployment experience I\'ve ever used.' },
-    { title: 'Linear', note: 'How all project management tools should feel. The benchmark for developer-focused product design.' },
-    { title: 'Raycast', note: 'Replaced Spotlight and never looked back.' },
-    { title: 'Warp', note: 'A terminal worth being excited about.' },
-    { title: 'Arc Browser', note: 'Rethought how a browser should work. Still my daily driver.' },
-  ],
-  podcasts: [
-    { title: 'Lenny\'s Podcast', note: 'Consistently the best product and growth thinking out there.' },
-    { title: 'The Changelog', note: 'Closest thing to a pulse on the open-source developer world.' },
-    { title: 'Acquired', note: 'Deeply researched company histories. Every episode feels like an MBA case study.' },
-    { title: 'My First Million', note: 'Entertaining idea generation from two people who think out loud well.' },
-  ],
-  gear: [
-    { title: 'MacBook Pro M3 Max', note: 'The best laptop I\'ve ever owned. No caveats.' },
-    { title: 'LG 27" 4K UltraFine', note: 'Clean, no-fuss display. Pairs perfectly with the MacBook.' },
-    { title: 'Keychron Q2', note: 'Compact, solid, satisfying. Great for travel too.' },
-    { title: 'AirPods Pro', note: 'Indispensable for calls, flights, and focus blocks.' },
-  ],
+  books: [],
+  tools: [],
+  podcasts: [],
+  gear: [],
 };
 ---
 
@@ -36,7 +15,7 @@ const favorites = {
 >
   <div class="container">
     <header>
-      <h1>Favorites</h1>
+      <h1>Favs</h1>
       <p>Books, tools, podcasts, and gear I actually use and recommend.</p>
     </header>
 
