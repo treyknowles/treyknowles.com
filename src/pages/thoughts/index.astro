@@ -11,7 +11,7 @@ const thoughts = allThoughts.sort((a, b) => b.data.date.valueOf() - a.data.date.
   <div class="container">
     <header>
       <h1>Thoughts</h1>
-      <p>thoughts that should probably be less wordy</p>
+      <p>A collection of thoughts that are probably too verbose.</p>
     </header>
     <section>
       {thoughts.map(essay => (
@@ -39,9 +39,10 @@ const thoughts = allThoughts.sort((a, b) => b.data.date.valueOf() - a.data.date.
   }
 
   h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: normal;
     color: var(--color-text);
     margin: 0 0 0.5rem;
   }

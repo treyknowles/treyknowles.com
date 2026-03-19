@@ -3,9 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const favorites = {
   books: [],
-  tools: [],
-  podcasts: [],
-  gear: [],
+  articles: [],
+  stuff: [],
 };
 ---
 
@@ -16,7 +15,7 @@ const favorites = {
   <div class="container">
     <header>
       <h1>Favs</h1>
-      <p>Books, tools, podcasts, and gear I actually use and recommend.</p>
+      <p>Things I recommend!</p>
     </header>
 
     <div class="sections">
@@ -33,9 +32,9 @@ const favorites = {
       </section>
 
       <section>
-        <h2>Tools</h2>
+        <h2>Articles</h2>
         <ul>
-          {favorites.tools.map(item => (
+          {favorites.articles.map(item => (
             <li>
               <div class="item-title">{item.title}</div>
               {item.note && <p>{item.note}</p>}
@@ -45,21 +44,9 @@ const favorites = {
       </section>
 
       <section>
-        <h2>Podcasts</h2>
+        <h2>Stuff</h2>
         <ul>
-          {favorites.podcasts.map(item => (
-            <li>
-              <div class="item-title">{item.title}</div>
-              {item.note && <p>{item.note}</p>}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section>
-        <h2>Gear</h2>
-        <ul>
-          {favorites.gear.map(item => (
+          {favorites.stuff.map(item => (
             <li>
               <div class="item-title">{item.title}</div>
               {item.note && <p>{item.note}</p>}
@@ -83,9 +70,10 @@ const favorites = {
   }
 
   h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: normal;
     color: var(--color-text);
     margin: 0 0 0.5rem;
   }
@@ -103,11 +91,12 @@ const favorites = {
   }
 
   h2 {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--color-muted);
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-text);
     margin: 0 0 1.25rem;
   }
 

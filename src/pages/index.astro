@@ -20,125 +20,143 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <!-- Career timeline -->
-      <details class="timeline">
-        <summary class="timeline-toggle">
-          <h2>Career <span class="toggle-icon" aria-hidden="true">🍕</span></h2>
-        </summary>
+      <div class="timeline">
+        <h2>Career</h2>
 
         <div class="timeline-list">
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://laravel.com" target="_blank" rel="noopener">Laravel</a>
-              <span class="period">Oct 2024 – Mar 2026</span>
+          <!-- Laravel -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://laravel.com" target="_blank" rel="noopener">Laravel</a>
+                <span class="period">Oct 2024 – Mar 2026</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">Director, Sales and RevOps</p>
+                </div>
+              </div>
             </div>
-            <p class="role">Director, Sales and RevOps</p>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
-              <span class="period">Aug 2023 – Sep 2024</span>
+          <!-- Vercel -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
+                <span class="period">Nov 2020 – Sep 2024</span>
+              </div>
+              <div class="role-list multi-role">
+                <div class="role-item">
+                  <span class="role-dot"></span>
+                  <div class="role-details">
+                    <p class="role">Director of GTM Operations</p>
+                    <span class="period">Aug 2023 – Sep 2024</span>
+                  </div>
+                </div>
+                <div class="role-item">
+                  <span class="role-dot"></span>
+                  <div class="role-details">
+                    <p class="role">Senior Manager, Sales Operations</p>
+                    <span class="period">Feb 2023 – Jul 2023</span>
+                  </div>
+                </div>
+                <div class="role-item">
+                  <span class="role-dot"></span>
+                  <div class="role-details">
+                    <p class="role">Director, Mid Market Sales</p>
+                    <span class="period">Feb 2022 – Jan 2023</span>
+                  </div>
+                </div>
+                <div class="role-item">
+                  <span class="role-dot"></span>
+                  <div class="role-details">
+                    <p class="role">Account Executive</p>
+                    <span class="period">Nov 2020 – Jan 2022</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="role">Director of GTM Operations</p>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
-              <span class="period">Feb 2023 – Jul 2023</span>
+          <!-- Lambda School -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://bloomtech.com" target="_blank" rel="noopener">Lambda School</a>
+                <span class="period">May 2019 – Oct 2020</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">Manager, Sales Development</p>
+                </div>
+              </div>
             </div>
-            <p class="role">Senior Manager, Sales Operations</p>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
-              <span class="period">Feb 2022 – Jan 2023</span>
+          <!-- Outreach -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://outreach.io" target="_blank" rel="noopener">Outreach</a>
+                <span class="period">Jan 2019 – May 2019</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">SDR</p>
+                </div>
+              </div>
             </div>
-            <p class="role">Director, Mid Market Sales</p>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>
-              <span class="period">Nov 2020 – Jan 2022</span>
+          <!-- Auth0 -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://auth0.com" target="_blank" rel="noopener">Auth0</a>
+                <span class="period">Sep 2017 – Nov 2018</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">Sales Operations</p>
+                </div>
+              </div>
             </div>
-            <p class="role">Account Executive</p>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://bloomtech.com" target="_blank" rel="noopener">Lambda School</a>
-              <span class="period">May 2019 – Oct 2020</span>
+          <!-- Thomson Reuters -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://thomsonreuters.com" target="_blank" rel="noopener">Thomson Reuters</a>
+                <span class="period">Oct 2016 – Aug 2017</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">Sales Program Specialist</p>
+                </div>
+              </div>
             </div>
-            <p class="role">Manager, Sales Development</p>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://outreach.io" target="_blank" rel="noopener">Outreach</a>
-              <span class="period">Jan 2019 – May 2019</span>
+          <!-- Neo4j -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://neo4j.com" target="_blank" rel="noopener">Neo Technology (Neo4j)</a>
+                <span class="period">May 2015 – May 2016</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">Startup Community Manager</p>
+                </div>
+              </div>
             </div>
-            <p class="role">SDR</p>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://auth0.com" target="_blank" rel="noopener">Auth0</a>
-              <span class="period">Sep 2017 – Nov 2018</span>
-            </div>
-            <p class="role">Sales Operations</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://thomsonreuters.com" target="_blank" rel="noopener">Thomson Reuters</a>
-              <span class="period">Oct 2016 – Aug 2017</span>
-            </div>
-            <p class="role">Sales Program Specialist</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <a class="company" href="https://neo4j.com" target="_blank" rel="noopener">Neo Technology (Neo4j)</a>
-              <span class="period">May 2015 – May 2016</span>
-            </div>
-            <p class="role">Startup Community Manager</p>
-          </div>
-        </div>
 
         </div>
-      </details>
+      </div>
 
     </div>
   </div>
@@ -187,71 +205,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   h2 {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--color-muted);
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--color-text);
     margin: 0 0 1.5rem;
   }
 
-  details.timeline {
+  .timeline {
     margin-bottom: 3rem;
   }
 
-  .timeline-toggle {
-    cursor: pointer;
-    list-style: none;
-    margin-bottom: 1.5rem;
-  }
-
-  .timeline-toggle::-webkit-details-marker {
-    display: none;
-  }
-
-  .timeline-toggle::marker {
-    display: none;
-  }
-
-  .timeline-toggle h2 {
-    margin: 0;
-  }
-
-  .toggle-icon {
-    display: inline-block;
-    color: var(--color-muted);
-    transition: transform 0.2s ease;
-  }
-
-  details[open] .toggle-icon {
-    transform: rotate(180deg);
-  }
-
-  .timeline-list {
-    /* no visual change, just a wrapper */
-  }
-
-  .timeline-item {
-    display: flex;
-    gap: 1rem;
+  .company-group {
     margin-bottom: 2rem;
-    position: relative;
   }
 
-  .timeline-marker {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--color-accent);
-    flex-shrink: 0;
-    margin-top: 0.4rem;
-  }
-
-  .timeline-content {
+  .group-content {
     flex: 1;
   }
 
-  .timeline-header {
+  .group-header {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
@@ -274,8 +249,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--color-muted);
   }
 
+  .role-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .role-list.multi-role {
+    border-left: 1px solid var(--color-border);
+    margin-left: 0.25rem;
+    padding-left: 0;
+  }
+
+  .role-item {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.35rem 0 0.35rem 0.75rem;
+  }
+
+  .role-list.multi-role .role-item {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .role-dot {
+    position: absolute;
+    left: -0.3rem;
+    top: 0.55rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    flex-shrink: 0;
+  }
+
+  .role-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
   .role {
-    font-size: 0.9375rem;
+    font-size: 1.25rem;
     color: var(--color-muted);
     margin: 0;
   }
