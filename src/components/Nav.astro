@@ -2,9 +2,9 @@
 import ThemeToggle from './ThemeToggle.astro';
 
 const links = [
-  { href: '/essays', label: 'Essays' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/favorites', label: 'Favs' },
+  { href: '/thoughts', label: 'thoughts' },
+  { href: '/projects', label: 'projects' },
+  { href: '/favorites', label: 'favs' },
 ];
 
 const current = Astro.url.pathname;
@@ -12,7 +12,7 @@ const current = Astro.url.pathname;
 
 <header>
   <nav>
-    <a href="/" class="wordmark">trey knowles</a>
+    <a href="/" class="wordmark">tk</a>
     <div class="nav-right">
       <ul>
         {links.map(({ href, label }) => (
@@ -46,10 +46,9 @@ const current = Astro.url.pathname;
   }
 
   .wordmark {
-    font-size: 0.9375rem;
-    font-weight: 600;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.25rem;
     color: var(--color-text);
-    letter-spacing: -0.02em;
     text-decoration: none;
   }
 
