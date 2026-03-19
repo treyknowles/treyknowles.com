@@ -30,32 +30,33 @@
 </button>
 
 <script>
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  let systemThemeListener: ((e: MediaQueryListEvent) => void) | null = null;
+
   function initThemeToggle() {
     const btn = document.getElementById('theme-toggle');
-    const sun = document.getElementById('icon-sun');
-    const moon = document.getElementById('icon-moon');
+    const sun = document.getElementById('icon-sun') as HTMLElement | null;
+    const moon = document.getElementById('icon-moon') as HTMLElement | null;
     if (!btn || !sun || !moon) return;
 
-    function updateIcons(theme: string) {
-      if (theme === 'light') {
-        sun.style.display = 'none';
-        moon.style.display = 'block';
-      } else {
-        sun.style.display = 'block';
-        moon.style.display = 'none';
-      }
+    function applyTheme(theme: string) {
+      document.documentElement.setAttribute('data-theme', theme);
+      sun!.style.display = theme === 'light' ? 'none' : 'block';
+      moon!.style.display = theme === 'light' ? 'block' : 'none';
     }
 
-    // Set initial icon state
-    const current = document.documentElement.getAttribute('data-theme') ?? 'dark';
-    updateIcons(current);
+    applyTheme(document.documentElement.getAttribute('data-theme') ?? 'dark');
 
     btn.addEventListener('click', () => {
       const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateIcons(next);
+      applyTheme(next);
     });
+
+    if (systemThemeListener) mq.removeEventListener('change', systemThemeListener);
+    systemThemeListener = (e: MediaQueryListEvent) => {
+      applyTheme(e.matches ? 'dark' : 'light');
+    };
+    mq.addEventListener('change', systemThemeListener);
   }
 
   initThemeToggle();
