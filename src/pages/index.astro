@@ -8,15 +8,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <div class="container">
     <div class="content">
-      <!-- Photo placeholder -->
-      <div class="photo-wrap">
-        <div class="photo-placeholder">
-          <span>Photo coming soon</span>
-        </div>
-      </div>
 
-      <div class="bio">
-        <p>TBD - UNDER CONSTRUCTION</p>
+      <!-- About -->
+      <div class="about">
+        <h2>Hi, I'm Trey!</h2>
+        <p>I'm currently an AE at Resend, building out early-stage sales processes. <a href="https://resend.com/careers" target="_blank" rel="noopener">We're hiring!</a></p>
+        <p>Prior to joining Resend, I was the first AE at Laravel and an early AE at Vercel. At both companies, I ended up doing a lot of GTM operations as well as I cannot resist the urge to build the systems and tooling that enables GTM teams to succeed.</p>
+        <p>As you may have noticed, I love going zero to one and I love supporting product led teams in their GTM journey. <a href="/contact">Feel free to reach out</a> if you're building a sales function or considering whether to hire your first AE.</p>
+        <p>Outside of work, I'm a husband to wonderful wife and mother, Sapphire, and two adorable kids. When I'm offline, you may find me reading a cookbook, watching the Utah Jazz, making/eating pizza, and over researching niche new topics.</p>
       </div>
 
       <!-- Career timeline -->
@@ -24,6 +23,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2>Career</h2>
 
         <div class="timeline-list">
+
+          <!-- Resend -->
+          <div class="company-group">
+            <div class="group-content">
+              <div class="group-header">
+                <a class="company" href="https://resend.com" target="_blank" rel="noopener">Resend</a>
+                <span class="period">Mar 2026 – Present</span>
+              </div>
+              <div class="role-list">
+                <div class="role-item">
+                  <p class="role">Founding Account Executive</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Laravel -->
           <div class="company-group">
@@ -204,8 +218,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0 0 1rem;
   }
 
+  .about {
+    margin-bottom: 3rem;
+  }
+
+  .about p {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin: 0 0 0.75rem;
+  }
+
+  .about a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .about a:hover {
+    color: var(--color-text);
+    opacity: 0.7;
+  }
+
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
     font-family: 'Permanent Marker', cursive;
     text-transform: none;
@@ -219,7 +255,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .company-group {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   .group-content {
@@ -255,9 +291,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role-list.multi-role {
-    border-left: 1px solid var(--color-border);
-    margin-left: 0.25rem;
-    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
   }
 
   .role-item {
@@ -272,14 +307,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role-dot {
-    position: absolute;
-    left: -0.3rem;
-    top: 0.55rem;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: var(--color-border);
-    flex-shrink: 0;
+    display: none;
   }
 
   .role-details {
@@ -289,7 +317,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .role {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--color-muted);
     margin: 0;
   }
